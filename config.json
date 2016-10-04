@@ -1,0 +1,13 @@
+{
+    "config": {
+        "gs_url": "https://cigalsace.org/geoserver/rest",
+        "_gs_url": "https://www.cigalsace.org/geoserver/rest",
+        "gs_username": "user",
+        "gs_password": "pwd",
+        "gs_disable_certificate": true,
+        "gs_ws_include": [],
+        "gs_ws_exclude": ["LBWGK", "LBWGS1", "LBWGS2", "SDH1", "SDH2"],
+        "gn_url_xml": "",
+        "gn_url_html": ""
+    }
+}
