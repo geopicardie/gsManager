@@ -21,6 +21,7 @@ __status__ = "Developement"
 # import helpers
 import process.datadir
 import process.check_mdlinks
+import process.get_styles
 
 
 def p1():
@@ -38,5 +39,6 @@ lst = {
     'help': help,
     'get_csv': process.datadir.get_csv,
     'get_txt': process.datadir.get_txt,
-    'check_mdlinks': process.check_mdlinks.run
+    'check_mdlinks': process.check_mdlinks.run,
+    'get_styles': process.get_styles.run
 }
