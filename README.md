@@ -2,20 +2,28 @@
 
 Application python permettant d'interagir avec une instance Geoserver.
 
-## Prérequis
-Python 2.7.12
-Installer le module gsconfig
+## Prérequis et configuration
+
+L'utilisation de gsManager nécessite, pour accéder à l'API REST de Geoserver de disposer d'un environnement Python avec le module [`gsconfig`](https://github.com/boundlessgeo/gsconfig) installé.
+Pour cela il est recommandé d'utiliser un environnement virtuel.
+
 ```
+$ python -m virtualenv gsManager
+$ source gsManager/bin/activate  <= Sous Linux
+$ .\gsManager\Script\activate    <= Sous Windows
 $ pip install gsconfig
 ```
 
-## Configuration
+Par ailleurs, veillez à utiliser une version récente de Python (version 2.7.12 testée).
+La version 2.7.5 (installation de QGIS par défaut) ne semble pas supporter les connexions HTTPS même en désactivant le contrôle de certificat.
+
+La configuration de la connexion à Geoserver s'effectue dans config.json (url, login, mot de passe, etc.).
 
 La configuration s'effectue dans config.json.
 - gs_ws_include le script parcours uniquement les workspace Geoserver précisés
 - gs_ws_exclude le script parcours tous les workspace à l'exeption de ceux précisés
 
-Pour obtenir la liste des processus (fonctions) disponibles:
+Pour obtenir la liste des processus (fonctions) disponibles dans gsManager:
 ```
 $ python gsManager.py help
 ```
