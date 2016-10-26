@@ -19,7 +19,6 @@ La version 2.7.5 (installation de QGIS par défaut) ne semble pas supporter les 
 
 La configuration de la connexion à Geoserver s'effectue dans config.json (url, login, mot de passe, etc.).
 
-La configuration s'effectue dans config.json.
 - gs_ws_include le script parcours uniquement les workspace Geoserver précisés
 - gs_ws_exclude le script parcours tous les workspace à l'exeption de ceux précisés
 
