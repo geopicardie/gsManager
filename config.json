@@ -8,6 +8,8 @@
         "gs_ws_include": [],
         "gs_ws_exclude": ["LBWGK", "LBWGS1", "LBWGS2", "SDH1", "SDH2"],
         "gn_url_xml": "",
-        "gn_url_html": ""
+        "gn_url_html": "",
+        "sld_dir": "mon_rep_sld",
+        "ws_post_styles": "mon_workspace_sld"
     }
 }
