@@ -22,7 +22,7 @@ __status__ = "Developement"
 import process.datadir
 import process.check_mdlinks
 import process.get_styles
-
+import process.post_styles
 
 def p1():
     print 'hello'
@@ -40,5 +40,6 @@ lst = {
     'get_csv': process.datadir.get_csv,
     'get_txt': process.datadir.get_txt,
     'check_mdlinks': process.check_mdlinks.run,
-    'get_styles': process.get_styles.run
+    'get_styles': process.get_styles.run,
+    'post_styles': process.post_styles.run
 }

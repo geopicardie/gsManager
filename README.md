@@ -51,6 +51,8 @@ $ python gsManager.py get_csv check_mdlinks get_csv
 
 - get_csv : récupérer l'ensemble des layers et de leurs informations sous forme de fichier CSV
 - check_mdlinks : vérifier les liens vers les métadonnées et compléter la liste à partir des liens déjà renseignés
+- get_styles : télécharger les sld d'un workspace
+- post_styles : injecter les sld d'un dossier dans Geoserver en affectant un workspace
 
 ## Ajouter de nouveaux processus
 
