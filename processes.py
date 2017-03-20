@@ -25,13 +25,13 @@ import process.get_styles
 import process.post_styles
 
 def p1():
-    print 'hello'
+    print('hello')
 
 
 def help():
-    print 'Liste des process disponibles:'
+    print ('Liste des process disponibles:')
     for p in lst:
-        print '- ' + p
+        print('- ' + p)
 
 
 lst = {

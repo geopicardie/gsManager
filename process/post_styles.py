@@ -29,4 +29,4 @@ def run():
             with open(fullpath) as f:
                 cat.create_style(sld[:-4], f.read(), overwrite=False, workspace=ws)
                 
-    print '\n'.join(log)
+    print('\n'.join(log))

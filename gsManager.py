@@ -18,10 +18,11 @@ __status__ = "Developement"
 import sys
 import time
 import processes
+import importlib
 
 # Encoding management
-reload(sys)  # Reload does the trick!
-sys.setdefaultencoding('UTF8')
+importlib.reload(sys)  # Reload does the trick!
+#sys.setdefaultencoding('UTF8')
 
 
 if __name__ == '__main__':
@@ -35,7 +36,7 @@ if __name__ == '__main__':
             process = str(arg)
             processes.lst[process]()
     else:
-        print 'No process specified'
+        print('No process specified')
 
     # Print script duration
     print("--- %s seconds ---" % (time.time() - start_time))

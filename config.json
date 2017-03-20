@@ -1,7 +1,6 @@
 {
     "config": {
-        "gs_url": "https://cigalsace.org/geoserver/rest",
-        "_gs_url": "https://www.cigalsace.org/geoserver/rest",
+        "gs_url": "http://www.geopicardie.fr/geoserver/rest/",
         "gs_username": "user",
         "gs_password": "pwd",
         "gs_disable_certificate": true,

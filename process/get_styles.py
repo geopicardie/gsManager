@@ -14,11 +14,11 @@ __maintainer__ = "Jean-pascal Klipfel"
 __email__ = "jean-pascal.klipfel@region-alsace.org"
 __status__ = "Developement"
 
-import urlparse
+from urllib.parse import urlparse
 import config as cfg
 import helpers
 import base64
-import urllib2
+import urllib
 
 def run():
     config = cfg.config
@@ -34,17 +34,17 @@ def run():
                 ly = cat.get_layer(rs.name)
                 rs.default_style = ly.default_style
                 url = config['config']['_gs_url'] + '/workspaces/' + ws.name + '/styles/' + rs.default_style.name + '.sld'
-                print 'add --> ' + url
+                print('add --> ' + url)
                 user, password = config['config']['gs_username'], config['config']['gs_password']
                 try:
-                    request = urllib2.Request(url)
+                    request = urllib.Request(url)
                     base64string = base64.b64encode('%s:%s' % (user, password))
                     request.add_header("Authorization", "Basic %s" % base64string)
-                    result = urllib2.urlopen(request)
+                    result = urllib.urlopen(request)
                     with open(rs.default_style.name + '.sld', "wb") as code:
                         code.write(result.read())
-                except urllib2.HTTPError as e:
+                except urllib.HTTPError as e:
                     error_message = e.read()
-                    print error_message
+                    print(error_message)
                 
-    print '\n'.join(log)
+    print('\n'.join(log))
