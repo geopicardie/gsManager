@@ -21,8 +21,11 @@ import processes
 import importlib
 
 # Encoding management
-importlib.reload(sys)  # Reload does the trick!
-#sys.setdefaultencoding('UTF8')
+if sys.version_info[0] < 3:
+    reload(sys) # Reload does the trick!
+    sys.setdefaultencoding('UTF8')
+else:
+    importlib.reload(sys)
 
 
 if __name__ == '__main__':
