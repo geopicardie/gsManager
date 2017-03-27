@@ -26,7 +26,7 @@ import helpers
 import re
 import requests
 
-from neogeo_xml import XMLtoObj
+from neogeo_xml_utils import XMLtoObj
 from xml.etree.ElementTree import XMLParser
 
 from requests.auth import HTTPBasicAuth
