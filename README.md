@@ -29,9 +29,9 @@ $ python gsManager.py help
 La version actuelle est une version modifiée du projet initial, qui ajoute une analyse des sections onlineResources dans les fiches pointées par les metadataURL dans Geoserver. L'analyse vérifie s'il y a des services WMS, WFS, WCS ou WMTS déclarés et pour chacun vérifie si le getCapabilities est indiqué et si le layername est bien celui de la source Geoserver.
 
 Cette version nécessite d'installer 2 autres modules : 
-* neogeo_utils (pour le parseur XML) :
+* neogeo-xml-utils (pour le parseur XML) :
 ```
-pip install git+https://github.com/neogeo-technologies/neogeo_utils.git
+pip install git+https://github.com/neogeo-technologies/neogeo-xml-utils.git
 ```
 * requests :
 ```
