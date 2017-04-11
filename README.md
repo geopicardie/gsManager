@@ -4,8 +4,7 @@ Application python permettant d'interagir avec une instance Geoserver.
 
 ## Prérequis et configuration
 
-L'utilisation de gsManager nécessite, pour accéder à l'API REST de Geoserver de disposer d'un environnement Python avec le module [`gsconfig`](https://github.com/boundlessgeo/gsconfig) installé.
-Pour cela il est recommandé d'utiliser un environnement virtuel.
+L'utilisation de gsManager nécessite, pour accéder à l'API REST de Geoserver de disposer d'un environnement Python avec le module [`gsconfig`](https://github.com/boundlessgeo/gsconfig) installé. Pour cela il est recommandé d'utiliser un environnement virtuel.
 
 ```
 $ python -m virtualenv gsManager
@@ -13,7 +12,6 @@ $ source gsManager/bin/activate  <= Sous Linux
 $ .\gsManager\Script\activate    <= Sous Windows
 $ pip install gsconfig
 ```
-
 Par ailleurs, veillez à utiliser une version récente de Python (version 2.7.12 testée).
 La version 2.7.5 (installation de QGIS par défaut) ne semble pas supporter les connexions HTTPS même en désactivant le contrôle de certificat.
 
@@ -26,6 +24,24 @@ Pour obtenir la liste des processus (fonctions) disponibles dans gsManager:
 ```
 $ python gsManager.py help
 ```
+
+## Evolutions de cette version
+La version actuelle est une version modifiée du projet initial, qui ajoute une analyse des sections onlineResources dans les fiches pointées par les metadataURL dans Geoserver. L'analyse vérifie s'il y a des services WMS, WFS, WCS ou WMTS déclarés et pour chacun vérifie si le getCapabilities est indiqué et si le layername est bien celui de la source Geoserver.
+
+Cette version nécessite d'installer 2 autres modules : 
+* neogeo-xml-utils (pour le parseur XML) :
+```
+pip install git+https://github.com/neogeo-technologies/neogeo-xml-utils.git
+```
+* requests :
+```
+pip install requests
+```
+
+## Utilisation avec Python 3
+La version actuelle peut également fonctionner avec Python 3 mais il faut alors installer [`gsconfig-py3`](https://pypi.python.org/pypi/gsconfig-py3) au lieu de gsconfig, et dans config.json, bien mettre le "/" après "rest" dans gs_url
+
+
 
 ## Utilisation
 

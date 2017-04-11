@@ -14,7 +14,6 @@ __maintainer__ = "Jean-pascal Klipfel"
 __email__ = "jean-pascal.klipfel@region-alsace.org"
 __status__ = "Developement"
 
-from urllib.parse import urlparse
 import config as cfg
 import helpers
 import base64

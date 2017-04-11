@@ -16,13 +16,17 @@ __status__ = "Developement"
 
 
 # import csv
-from urllib.parse import urlparse, parse_qs
+import sys
+if sys.version_info[0] < 3:
+    from urlparse import urlparse, parse_qs
+else:
+    from urllib.parse import urlparse, parse_qs
 import config as cfg
 import helpers
 import re
 import requests
 
-from neogeo_xml import XMLtoObj
+from neogeo_xml_utils import XMLtoObj
 from xml.etree.ElementTree import XMLParser
 
 from requests.auth import HTTPBasicAuth
