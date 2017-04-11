@@ -134,7 +134,7 @@ def run():
 
                                 cpt += 1
                                 log.append(' ' * 4 + '- OnlineResource URL : ' + protocol + ' | ' + linkage)
-                                if 'GetCapabilities' not in linkage:
+                                if 'getcapabilities' not in linkage.lower():
                                     log.append(' ' * 6 + '* ERROR : manque GetCapabilities')
 
                                 try:
@@ -144,7 +144,7 @@ def run():
                                     continue
 
                                 if l_name not in (rs.name, ws.name + ':' + rs.name):
-                                    log.append(' ' * 6 + '* ERROR : name différent du layer : ' + l_name)
+                                    log.append(' ' * 6 + '* WARNING : name différent du layer : ' + l_name)
 
                             if cpt == 0:
                                 log.append(' ' * 4 + '- Aucun service WFS, WMS, WCS ou WMTS détecté dans cette fiche')
